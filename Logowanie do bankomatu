@@ -1,0 +1,44 @@
+#include <iostream>
+#include <windows.h>
+
+using namespace std;
+
+string PIN;
+int liczba_prob=3;
+
+int main()
+{
+        cout << "Witaj w Banku Millenium!!" << endl;
+        cout <<"Wloz karte" <<endl;
+        Sleep(2000);
+
+        cout<<"Wprowadz PIN: ";
+        cin >> PIN;
+
+        do
+        {
+        liczba_prob--;
+        if(PIN!="1111")
+        {
+        cout <<"Niepoprawny PIN!"<<endl;
+        cout <<"Pozostalo "<<liczba_prob<<" prob"<<endl;
+        cout <<"Wprowadz ponownie PIN"<<endl;
+        cin >>PIN;
+        }
+        else if(PIN=="1111")
+        {
+        cout<<"Poprawny PIN";
+        }
+        }
+        while((PIN!="1111")&&(liczba_prob>=1));
+}
+
+
+
+
+
+
+
+
+
+
